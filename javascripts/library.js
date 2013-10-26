@@ -25,6 +25,7 @@ $(document).ready(function(){
       $(element).find('.library-code').html('<pre><code></code></pre>');
       $(element).find('.library-code pre code').text(content);
       $(element).prepend("<span class='library-section-label'>"+label+"</span>");
+      $(element).find('.library-code').append("<div class='copy'><button class='clip-button' data-clipboard-text='"+content+"'>Copy code</button></div>");
     },
 
     loadHighlight: function(){
@@ -42,6 +43,12 @@ $(document).ready(function(){
   // Navigation Toggle
   $('.library-navigation .expander').click(function(){
     $('.library-navigation').toggleClass('expanded');
+  });
+  
+  var clip = new ZeroClipboard($(".clip-button"));
+  
+  clip.on( 'complete', function (client, args) {
+    $(this).text("Copied!").addClass("copied")
   });
   
 });

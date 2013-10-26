@@ -150,6 +150,33 @@ body, html {
 .library-code {
   background: #ecf0f1;
 }
+.library-code .copy {
+  padding: 10px 0;
+  text-align: right;
+}
+
+.clip-button {
+  border: none;
+  background-color: #3090A8;
+  color: #fff;
+  padding: 7px;
+  border-radius: 3px;
+  font-size: 12px;
+  box-shadow: 1px 0px 1px rgba(0,0,0,0.3);
+  -webkit-appearance: none;
+}
+.clip-button:hover, .clip-button.zeroclipboard-is-hover {
+  background-color: #64CEE9;
+  cursor: pointer;
+}
+.clip-button:active, .clip-button.zeroclipboard-is-active {
+  background-color: #64CEE9;
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.clip-button.copied {
+  background-color: #aaa;
+}
 
 /*=============================*/
 /* Code Highlight
